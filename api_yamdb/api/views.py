@@ -1,30 +1,24 @@
 from django.core.mail import send_mail
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
-from rest_framework import (
-    filters, generics, permissions, status, viewsets
-)
+from rest_framework import filters, generics, permissions, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from reviews.models import Category, Genre, Review, Title, User
 
 from api_yamdb.settings import ADMIN_EMAIL
 
-from reviews.models import Category, Genre, Review, Title, User
-from .mixins import MixinSet
 from .filters import TitleFilter
-from .permissions import (
-    AdminOrSuperUserOnly,
-    IsAdminUserOrReadOnly,
-    StaffOrAuthorOrReadOnly
-)
-from .serializers import (
-    CategorySerializer, CommentSerializer, ConfirmationSerializer,
-    GenreSerializer, ReviewSerializer, SignupSerializer,
-    TitleReadSerializer, TitleWriteSerializer,
-    UserMeSerializer, UserSerializer
-)
+from .mixins import MixinSet
+from .permissions import (AdminOrSuperUserOnly, IsAdminUserOrReadOnly,
+                          StaffOrAuthorOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          ConfirmationSerializer, GenreSerializer,
+                          ReviewSerializer, SignupSerializer,
+                          TitleReadSerializer, TitleWriteSerializer,
+                          UserMeSerializer, UserSerializer)
 
 
 class SignupView(generics.GenericAPIView):

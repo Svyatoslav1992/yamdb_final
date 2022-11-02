@@ -1,7 +1,7 @@
+from api.urls_v1 import v1
 from django.urls import include, path
 
 from . import views
-from api.urls_v1 import v1
 
 urlpatterns = [
     path('v1/', include(v1.urls)),
