@@ -39,7 +39,7 @@ jobs:
           no-cache: true
           push: true
           context: ./api_yamdb/
-          tags: Svyatoslav1992/yamdb_final:latest
+          tags: svyatoslav1992/yamdb_final:latest
 
   deploy:
     runs-on: ubuntu-latest
