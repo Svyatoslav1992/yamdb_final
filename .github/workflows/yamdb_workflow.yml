@@ -36,10 +36,10 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2 
         with:
-          no-cache: true
           push: true
+          file: api_yamdb/Dockerfile
           context: ./api_yamdb/
-          tags: svyatoslav1992/yamdb_final:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
 
   deploy:
     runs-on: ubuntu-latest
