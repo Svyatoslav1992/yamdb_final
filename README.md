@@ -1,6 +1,6 @@
 ![example workflow](https://github.com/Svyatoslav1992/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-Проверить доступность сервиса: http://${{ secrets.HOST }}/admin/
+Проверить доступность сервиса: http://84.201.161.6/admin/
 
 ### Описание проекта: 
 
