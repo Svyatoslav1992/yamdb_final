@@ -54,7 +54,7 @@
 для Linux-систем все команды необходимо выполнять от имени администратора
 - Склонировать репозиторий
 ```bash
-git clone https://github.com/EvgeniyPrivalov1986/yamdb_final.git
+git clone https://github.com/svyatoslav1992/yamdb_final.git
 ```
 - Выполнить вход на удаленный сервер
 - Установить docker на сервер:
